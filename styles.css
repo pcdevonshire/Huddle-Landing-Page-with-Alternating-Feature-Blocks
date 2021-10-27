@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --paleCyan: hsl(193, 100%, 96%);
+    --darkCyan: hsl(192, 100%, 9%);
+    --grayishBlue: hsl(208, 11%, 55%);
+    --black: #000;
+    --white: #fff;
+    --Poppins: 'Poppins', sans-serif;
+    --OpenSans: 'Open Sans', sans-serif;
+}
+
+::selection {
+    color: var(--white);
+    background-color: var(--darkCyan);
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    min-height: 100vh;
+    min-width: 375px;
+    max-width: 1980px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    font-family: var(--OpenSans);
+    text-align: center;
+}
+
+.container {
+    padding: 2em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, a {
+    font-family: var(--Poppins);
+    font-weight: 600;
+}
+
+.header {
+    background-color: var(--paleCyan);
+    background-image: url(images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 2em;
+    max-width: 500px;
+    margin: 0 auto 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.nav img {
+    margin: 0;
+    width: 125px;
+}
+
+.nav a, .hero-text a, .ready a {
+    color: var(--black);
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 25px;
+    padding: 0.5em 1.5em;
+    font-size: 13px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--grayishBlue);
+}
+
+.hero-text a:hover, .ready a:hover {
+    background-color: hsla(322, 100%, 66%, 0.60);
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 3em;
+}
+
+.hero-text a {
+    color: var(--white);
+    background-color: var(--pink);
+    padding: 1em 4em;
+}
+
+.hero-text {
+    margin-bottom: 5em;
+}
+
+.hero img {
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 12px);
+}
+
+.together, .conversations, .users, .ready {
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 3em;
+}
+
+:is(.together, .conversations, .users) img {
+    margin-bottom: 4em;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 0.75em;
+}
+
+:is(.together, .conversations, .users) p {
+    color: var(--grayishBlue);
+    line-height: 1.75;
+    font-size: 15px;
+    margin-bottom: 0.5em;
+}
+
+.ready {
+    padding: 2em 1em 3em 1em;
+    transform: translateY(150px);
+    background-color: var(--white);
+    z-index: 1;
+}
+
+.ready h1 {
+    font-size: 22px;
+    margin-bottom: 1.5em;
+}
+
+.ready a {
+    color: var(--white);
+    background-color: var(--pink);
+    padding: 1em 4em;
+}
+
+footer {
+    background-color: var(--darkCyan);
+    padding: 8em 1em 2em 1em;
+    color: var(--white);
+    text-align: left;
+}
+
+footer img {
+    margin: 0;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(2%) saturate(0%) hue-rotate(310deg) brightness(115%) contrast(100%);
+}
+
+footer > img {
+    width: 150px;
+    margin-bottom: 2em;
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5em;
+}
+
+.info img {
+    margin-top: 0.25em;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+footer li {
+    margin-bottom: 1.5em;
+}
+
+footer a {
+    color: var(--white);
+    font-family: var(--OpenSans);
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom: 1px solid var(--darkCyan);
+    transition: border-bottom 0.3s;
+}
+
+footer a:hover {
+    border-bottom: 1px solid var(--white);
+}
+
+.career {
+    margin-bottom: 4em;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.icons span {
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.icons span:hover {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(85%) saturate(4033%) hue-rotate(295deg) brightness(103%) contrast(101%);
+}
+
+.social p {
+    text-align: center;
+    font-size: 13px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .header {
+        background-image: url(images/bg-hero-desktop.svg);
+        max-width: 100%;
+        padding: 5em;
+        text-align: left;
+    }
+
+    .nav img {
+        width: 200px;
+    }
+
+    .nav a, .hero-text a, .ready a {
+        padding: 1em 4em;
+        font-size: 16px;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        width: 45%;
+        margin: 0;
+        padding: 0 4em 0 0;
+    }
+
+    .hero > img {
+        width: 55%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    
+    p {
+        font-size: 20px;
+        margin-bottom: 2em;
+    }
+    
+    .hero-text a {
+        padding: 1em 4em;
+    }
+
+    .container {
+        padding: 10em 2em;
+        max-width: 1200px;
+    }
+
+    .together, .conversations, .users {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4em 2em 4em 7.5em;
+        text-align: left;
+    }
+
+    .together img, .users img {
+        order: 1;
+    }
+
+    :is(.together, .conversations, .users) img {
+        width: 400px;
+        margin: 0;
+    }
+
+    .card-text {
+        max-width: 50%;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 0.5em;
+    }
+    
+    :is(.together, .conversations, .users) p {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .ready {
+        padding: 5em 3em;
+        transform: translateY(250px);
+        margin: -150px auto 0 auto;
+        max-width: 75%;
+    }
+    
+    .ready h1 {
+        font-size: 36px;
+        margin-bottom: 1.5em;
+    }
+    
+    .ready a {
+        padding: 1.5em 5em;
+        border-radius: 50px;
+    }
+    
+    footer {
+        padding: 12.5em 5em 3em 5em;
+    }
+
+    footer > img {
+        width: 250px;
+        margin-bottom: 2.5em;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .contact {
+        width: 30%;
+    }
+
+    .career {
+        margin-bottom: 0;
+    }
+    
+    .icons {
+        justify-content: start;
+        margin-bottom: 10em;
+    }
+
+    .social p {
+        text-align: left;
+    }
+
+}
